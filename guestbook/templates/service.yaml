@@ -4,9 +4,9 @@ metadata:
   name: {{ .Release.Name }}-ui 
 spec:
   ports:
-  - port: {{ .Values.port } }
+  - port: {{ .Values.port }}
     targetPort: {{ .Values.port }}
   selector:
-    app: {{ Release.Name }}
+    app: {{ .Release.Name }}
   type: LoadBalancer
 
